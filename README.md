@@ -4,7 +4,7 @@
 
 The aim of the code is to provide a reproducible way to gather flight offers data on Kayak. The bot can be easily scheduled to repat the process at the same interval (e.g. every hour for one week).
 
-The bot will go on kayak.com/best-flights and scrape all flight offers data every 3 hours. At each iteration an e-mail will be sent containing the price variation with respect to the average price of all previous iterations. In addition the advice of Kayak will be included that could be 'monitor the price' or 'buy now' depending on kayak's analyists prices forecast. 
+The bot will go on kayak.com and scrape all flight offers data every at any programmed period of time. At each iteration an e-mail will be sent containing the price variation with respect to the average price of all previous iterations. In addition the advice of Kayak will be included that could be 'monitor the price' or 'buy now' depending on kayak's analyists prices forecast. 
 
 the scraped data includes:
 - company
@@ -25,6 +25,9 @@ Using the search_flight function the user can specify:
 - arrive city abbr. 
 - outband date (the format is: 'YYYY-MM-DD')
 - return date
+ 
+ the link for scraping will be:
+https://www.kayak.it/flights/{departure}-{destination}/{date_dep}/{date_ret}?sort=bestflight_a
 
 With the sendmail function the user can specify:
 - the sender's e-mail
